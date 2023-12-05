@@ -1,0 +1,9 @@
+{
+    "context": "game",
+    "translations": {
+        "enabled": true,
+        "languages": [
+            "fr"
+        ]
+    }
+}
