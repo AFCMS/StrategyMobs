@@ -7,3 +7,6 @@
 [submodule "mods/signs_lib"]
 	path = mods/signs_lib
 	url = https://github.com/mt-mods/signs_lib
+[submodule "mods/panel_lib"]
+	path = mods/panel_lib
+	url = https://gitlab.com/zughy-friends-minetest/panel_lib
