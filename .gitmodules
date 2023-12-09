@@ -1,3 +1,6 @@
 [submodule "mods/arena_lib"]
 	path = mods/arena_lib
 	url = https://gitlab.com/zughy-friends-minetest/arena_lib
+[submodule "mods/audio_lib"]
+	path = mods/audio_lib
+	url = https://gitlab.com/zughy-friends-minetest/audio_lib
