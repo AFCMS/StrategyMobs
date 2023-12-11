@@ -10,3 +10,6 @@
 [submodule "mods/panel_lib"]
 	path = mods/panel_lib
 	url = https://gitlab.com/zughy-friends-minetest/panel_lib
+[submodule "mods/strategymobs_core"]
+	path = mods/strategymobs_core
+	url = https://github.com/AFCMS/strategymobs_core
