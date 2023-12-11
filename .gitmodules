@@ -13,3 +13,6 @@
 [submodule "mods/strategymobs_core"]
 	path = mods/strategymobs_core
 	url = https://github.com/AFCMS/strategymobs_core
+[submodule "mods/stent"]
+	path = mods/stent
+	url = https://github.com/AFCMS/stent
