@@ -16,3 +16,6 @@
 [submodule "mods/stent"]
 	path = mods/stent
 	url = https://github.com/AFCMS/stent
+[submodule "mods/formspec_ast"]
+	path = mods/formspec_ast
+	url = https://gitlab.com/luk3yx/minetest-formspec_ast
