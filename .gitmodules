@@ -19,6 +19,3 @@
 [submodule "mods/formspec_ast"]
 	path = mods/formspec_ast
 	url = https://gitlab.com/luk3yx/minetest-formspec_ast
-[submodule "mods/xdecor-libre"]
-	path = mods/xdecor-libre
-	url = https://codeberg.org/Wuzzy/xdecor-libre
