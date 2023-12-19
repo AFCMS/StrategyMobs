@@ -2,11 +2,12 @@
     "type": "GAME",
     "title": "StrategyMobs",
     "name": "strategy_mobs",
-    "short_description": "",
+    "short_description": "A two player board game",
     "dev_state": "WIP",
     "tags": [
         "multiplayer",
-        "strategy_rts"
+        "strategy_rts",
+        "jam_game_2023"
     ],
     "content_warnings": [],
     "license": "GPL-3.0-or-later",
