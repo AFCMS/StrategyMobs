@@ -1,0 +1,11 @@
+{
+	"items": {
+		"default:stonebrick": true,
+		"stairs:slab_stonebrick": true,
+		"stairs:stair_stonebrick": true,
+		"xdecor:chair": true,
+		"xdecor:lantern": true,
+		"xdecor:table": true
+	},
+	"media": null
+}
