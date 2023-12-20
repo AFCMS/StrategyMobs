@@ -21,6 +21,7 @@
         "AreaStore",
         "vector",
         "arena_lib",
+        "stent",
         "modgen"
     ],
     "workspace.ignoreDir": [
