@@ -20,7 +20,8 @@
         "ItemStack",
         "AreaStore",
         "vector",
-        "arena_lib"
+        "arena_lib",
+        "modgen"
     ],
     "workspace.ignoreDir": [
         ".luacheckrc"
