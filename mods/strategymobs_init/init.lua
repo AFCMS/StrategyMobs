@@ -177,6 +177,14 @@ minetest.register_on_joinplayer(function(player)
 		healthbar = false,
 		minimap = false,
 	})
+
+	player:set_properties({
+		mesh = "character.b3d",
+		textures = { "character.png" },
+		visual = "mesh",
+		visual_size = { x = 1, y = 1 },
+		stepheight = 1.47
+	})
 end)
 
 minetest.log("action", "[strategymobs_init] Loaded successfully")
