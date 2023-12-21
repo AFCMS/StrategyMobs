@@ -70,5 +70,12 @@ minetest.register_on_mods_loaded(function()
 	})
 end)
 
+minetest.register_on_joinplayer(function(player)
+	player:hud_set_flags({
+		hotbar = false,
+		healthbar = false,
+		minimap = false,
+	})
+end)
 
 minetest.log("action", "[strategymobs_init] Loaded successfully")
