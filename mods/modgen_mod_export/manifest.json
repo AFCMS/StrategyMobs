@@ -1,0 +1,34 @@
+{
+	"bounds" : 
+	{
+		"max" : 
+		{
+			"x" : 0.0,
+			"y" : 1.0,
+			"z" : 0.0
+		},
+		"min" : 
+		{
+			"x" : 0.0,
+			"y" : 1.0,
+			"z" : 0.0
+		}
+	},
+	"chunks" : 1.0,
+	"mtime" : 1703115908.0,
+	"next_id" : 8.0,
+	"node_mapping" : 
+	{
+		"air" : 0.0,
+		"arena_lib:barrier" : 1.0,
+		"default:stonebrick" : 2.0,
+		"stairs:slab_stonebrick" : 6.0,
+		"stairs:stair_stonebrick" : 5.0,
+		"xdecor:chair" : 7.0,
+		"xdecor:lantern" : 4.0,
+		"xdecor:table" : 3.0
+	},
+	"size" : 1180.0,
+	"uid" : "787349",
+	"version" : 4.0
+}
