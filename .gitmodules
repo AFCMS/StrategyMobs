@@ -19,3 +19,6 @@
 [submodule "mods/formspec_ast"]
 	path = mods/formspec_ast
 	url = https://gitlab.com/luk3yx/minetest-formspec_ast
+[submodule "mods/minetest_show_wielded_item"]
+	path = mods/minetest_show_wielded_item
+	url = https://codeberg.org/Wuzzy/minetest_show_wielded_item
