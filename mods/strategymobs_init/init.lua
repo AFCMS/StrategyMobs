@@ -80,14 +80,17 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 			local arena_id, arena = arena_lib.get_arena_by_name(data.mod, data.name)
 			if arena.in_game then
 				arena_lib.join_arena(data.mod, p_name, arena_id)
+				stent.refresh_formspecs()
 			else
 				arena_lib.join_queue(data.mod, arena, p_name)
+				stent.refresh_formspecs()
 			end
 		end
 	end
 
 	if fields.leave then
 		arena_lib.remove_player_from_queue(p_name)
+		stent.refresh_formspecs()
 	end
 
 	if fields.spectate then
@@ -98,6 +101,7 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 
 			if arena.in_game and modref.spectate_mode then
 				arena_lib.join_arena(data.mod, p_name, arena_id, true)
+				stent.refresh_formspecs()
 			end
 		end
 	end
