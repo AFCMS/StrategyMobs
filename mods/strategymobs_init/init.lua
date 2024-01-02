@@ -69,22 +69,19 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 	if fields.arena_list_example then
 		local evt = minetest.explode_textlist_event(fields.arena_list_example)
 		if evt.type == "CHG" then
-			player_menu_data[p_name] = player_menu_data[p_name] or {}
 			player_menu_data[p_name].selected_idx = evt.index
 		end
 	end
 
 	if fields.join then
-		if player_menu_data[p_name] and player_menu_data[p_name].selected_idx then
-			local data = stent.saved_arenas_data[player_menu_data[p_name].selected_idx]
-			local arena_id, arena = arena_lib.get_arena_by_name(data.mod, data.name)
-			if arena.in_game then
-				arena_lib.join_arena(data.mod, p_name, arena_id)
-				stent.refresh_formspecs()
-			else
-				arena_lib.join_queue(data.mod, arena, p_name)
-				stent.refresh_formspecs()
-			end
+		local data = stent.saved_arenas_data[player_menu_data[p_name].selected_idx]
+		local arena_id, arena = arena_lib.get_arena_by_name(data.mod, data.name)
+		if arena.in_game then
+			arena_lib.join_arena(data.mod, p_name, arena_id)
+			stent.refresh_formspecs()
+		else
+			arena_lib.join_queue(data.mod, arena, p_name)
+			stent.refresh_formspecs()
 		end
 	end
 
@@ -94,15 +91,13 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 	end
 
 	if fields.spectate then
-		if player_menu_data[p_name] and player_menu_data[p_name].selected_idx then
-			local data = stent.saved_arenas_data[player_menu_data[p_name].selected_idx]
-			local arena_id, arena = arena_lib.get_arena_by_name(data.mod, data.name)
-			local modref = arena_lib.mods[data.mod]
+		local data = stent.saved_arenas_data[player_menu_data[p_name].selected_idx]
+		local arena_id, arena = arena_lib.get_arena_by_name(data.mod, data.name)
+		local modref = arena_lib.mods[data.mod]
 
-			if arena.in_game and modref.spectate_mode then
-				arena_lib.join_arena(data.mod, p_name, arena_id, true)
-				stent.refresh_formspecs()
-			end
+		if arena.in_game and modref.spectate_mode then
+			arena_lib.join_arena(data.mod, p_name, arena_id, true)
+			stent.refresh_formspecs()
 		end
 	end
 end)
@@ -176,6 +171,12 @@ minetest.register_on_mods_loaded(function()
 end)
 
 minetest.register_on_joinplayer(function(player)
+	---Formspec Data
+	local p_name = player:get_player_name()
+	player_menu_data[p_name] = {}
+	player_menu_data[p_name].selected_idx = 1 -- Select fist arena
+
+	---Builtin Stuff
 	player:hud_set_flags({
 		hotbar = false,
 		healthbar = false,
@@ -189,6 +190,11 @@ minetest.register_on_joinplayer(function(player)
 		visual_size = { x = 1, y = 1 },
 		stepheight = 1.47
 	})
+end)
+
+minetest.register_on_leaveplayer(function(player, timed_out)
+	local p_name = player:get_player_name()
+	player_menu_data[p_name] = nil
 end)
 
 minetest.log("action", "[strategymobs_init] Loaded successfully")
